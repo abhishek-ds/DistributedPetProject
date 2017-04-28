@@ -63,6 +63,5 @@ C:\Projects\DistributedPetProjectSoln\DistributedPetProject\bin\Microsoft.Owin.S
 C:\Projects\DistributedPetProjectSoln\DistributedPetProject\bin\Microsoft.Owin.Security.Google.xml
 C:\Projects\DistributedPetProjectSoln\DistributedPetProject\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Projects\DistributedPetProjectSoln\DistributedPetProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Projects\DistributedPetProjectSoln\DistributedPetProject\obj\Debug\DistributedPetProject.csprojResolveAssemblyReference.cache
 C:\Projects\DistributedPetProjectSoln\DistributedPetProject\obj\Debug\DistributedPetProject.dll
 C:\Projects\DistributedPetProjectSoln\DistributedPetProject\obj\Debug\DistributedPetProject.pdb
