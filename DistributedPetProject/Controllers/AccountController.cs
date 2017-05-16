@@ -446,7 +446,7 @@ namespace DistributedPetProject.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Contact", "Home");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

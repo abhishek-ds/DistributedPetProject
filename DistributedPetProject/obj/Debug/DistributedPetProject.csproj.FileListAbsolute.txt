@@ -65,3 +65,4 @@ C:\Projects\DistributedPetProjectSoln\DistributedPetProject\bin\Microsoft.Owin.S
 C:\Projects\DistributedPetProjectSoln\DistributedPetProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Projects\DistributedPetProjectSoln\DistributedPetProject\obj\Debug\DistributedPetProject.dll
 C:\Projects\DistributedPetProjectSoln\DistributedPetProject\obj\Debug\DistributedPetProject.pdb
+C:\Projects\DistributedPetProjectSoln\DistributedPetProject\obj\Debug\DistributedPetProject.csprojResolveAssemblyReference.cache
