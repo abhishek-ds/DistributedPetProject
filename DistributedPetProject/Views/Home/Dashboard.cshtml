@@ -1,46 +1,190 @@
-﻿<html>
-<body>
-    <h2>
-        PetMyPet Dashboard
-    </h2>
-    <table class="table  table-striped">
-        <thead class="thead-inverse" style="background-color:#708090;">
-            <tr>
-                <th>#</th>
-                <th>Owner's First Name</th>
-                <th>Owner's Last Name</th>
-                <th>Pet Type</th>
-                <th>DateTime</th>
-                <th>Rate</th>                
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>Dog</td>
-                <td>12/21/2017</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>Dog</td>
-                <td>06/21/2017</td>
-                <td>20</td>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet_My_Pet</title>
 
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>Scope</td>
-                <td>Cat</td>
-                <td>07/1/2017</td>
-                <td>17</td>
-            </tr>
-        </tbody>
-    </table>    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+
+
+<body>
+    <div class="container">
+        <br><br>
+        <!--ADD NEW POST-->
+        <label>CATEGORIES</label><button type="button" class="btn pull-right btn-danger">ADD A NEW POST</button>
+        <br>
+
+        <!--============================================Categories-->
+
+        <div class="row">
+            <hr class="hr-primary" />
+            <ol class="breadcrumb bread-primary ">
+                <button href="#" class="btn btn-primary"><i class="fa fa-newspaper-o"></i> Dog</button>
+                <li><a href="#">LOCATION</a></li>
+                <li><a href="#">PRICE</a></li>
+                <li class="active">CAT</li>
+            </ol>
+        </div>
+
+
+
+
+        <!--============================================-Blog Post-->
+        <hr>
+        <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="http://placehold.it/260x180">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Title of the post</h4>
+                    <button type="button" class="btn btn-success text-right">APPLY FOR JOB</button>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                        Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                        dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                        Aliquam in felis sit amet augue.
+                    </p>
+                    <ul class="list-inline list-unstyled">
+                        <li><span><i class="glyphicon glyphicon-calendar"></i> May 24th, 2017 </span></li>
+                        <li>|</li>
+                        <li><span><i class="glyphicon glyphicon-price"></i> $200</span></li>
+                        <li>|</li>
+                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Philadelphia</a></span></li>
+                        <li>|</li>
+                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Dog</a></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="http://placehold.it/260x180">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Title of the post</h4>
+                    <button type="button" class="btn btn-success text-right">APPLY FOR JOB</button>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                        Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                        dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                        Aliquam in felis sit amet augue.
+                    </p>
+                    <ul class="list-inline list-unstyled">
+                        <li><span><i class="glyphicon glyphicon-calendar"></i> May 24th, 2017 </span></li>
+                        <li>|</li>
+                        <li><span><i class="glyphicon glyphicon-price"></i> $200</span></li>
+                        <li>|</li>
+                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Philadelphia</a></span></li>
+                        <li>|</li>
+                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Dog</a></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+        <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="http://placehold.it/260x180">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Title of the post</h4>
+                    <button type="button" class="btn btn-success text-right">APPLY FOR JOB</button>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                        Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                        dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                        Aliquam in felis sit amet augue.
+                    </p>
+                    <ul class="list-inline list-unstyled">
+                        <li><span><i class="glyphicon glyphicon-calendar"></i> May 24th, 2017 </span></li>
+                        <li>|</li>
+                        <li><span><i class="glyphicon glyphicon-price"></i> $200</span></li>
+                        <li>|</li>
+                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Philadelphia</a></span></li>
+                        <li>|</li>
+                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Dog</a></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <br> <br>
+        <!--============================================-CREATE POST-->
+        <h2>CREATE A NEW POST FORM</h2>
+        <div class="well">
+            <form action="" method="POST">
+
+
+                <h4>CREATE NEW POST:</h4>
+                <div class="form-group">
+                    <label for="title">Title <span class="require">*</span></label>
+                    <input type="text" class="form-control" name="title" />
+                </div>
+
+
+                <div class="form-group">
+                    <label for="title">Price <span class="require">*</span></label>
+                    <input type="text" class="form-control" name="title" />
+                </div>
+
+
+                <div class="form-group">
+                    <label for="title">Location <span class="require">*</span></label>
+                    <input type="text" class="form-control" name="title" />
+                </div>
+
+
+                <div class="form-group">
+                    <label for="title">Category <span class="require">*</span></label>
+                    <input type="text" class="form-control" name="title" />
+                </div>
+
+                <div class="fileinput fileinput-new" data-provides="fileinput">
+                    <span><strong>Upload Image:</strong></span><span class="btn btn-default btn-file"><input type="file" /></span>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea rows="5" class="form-control" name="description"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <p><span class="require">*</span> - required fields</p>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">
+                        Create
+                    </button>
+                    <button class="btn btn-default">
+                        Cancel
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </body>
 </html>
