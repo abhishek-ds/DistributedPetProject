@@ -1,0 +1,33 @@
+﻿
+<html>
+<head>
+    <script type="text/javascript">
+        function callMe() {
+            var newWindow;
+            newWindow = window.open("","","status=200, height=450, width=500");
+            newWindow.moveTo(400,250);
+            newWindow.focus();
+            newWindow.document.write("<Center><h2> Your Request Receipt </h2></Center><p>");
+            var orderId = @ViewBag.Value;
+            newWindow.document.write("<br /><br /><b>Order ID: </b>" + '<b>' + orderId + '</b>' +
+                '<br />')
+                newWindow.document.write("<b>Status: </b>" + '<b>' +  "Request Submitted" + '</b>' +
+                '<br /><br /><br /><br /><br /><br /><br /><br /><br />')
+                newWindow.document.write("<br /><br /><br /><br /><b>Note: </b>" + '<b>' + "Might take few days to process" + '</b>' +
+                '<br />')
+                var form = $('<form action=@Url.Action("Dashboard", "Home")</form>');
+            $('body').append(form);
+            form.submit();
+            newWindow.document.close();
+        }
+
+    </script>
+</head>
+<body>
+    <form style="position:fixed; top:40%; left:40%; width:500px;">
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" style="padding: 50px;"value="Proceed for Acknowledgement" onclick="return callMe()" />
+        </div>
+    </form>
+</body>
+</html>

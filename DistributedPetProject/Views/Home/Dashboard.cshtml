@@ -11,180 +11,95 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function doSubmit() {    
+        var form = $('<form action=@Url.Action("AddNew", "Home") method="post"'+'</form>');
+        $('body').append(form);
+        form.submit();
+    }
 
+    </script>
+        <h2 style="color: black; text-align: center;">My Dashboard</h2>
+        <style>
+            td {
+                text-align: left;
+                padding: 30px;
+                height: 30px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            th {
+                border: 1px solid black;
+                text-align: center;
+                padding: 6px;
+                color: white;
+                background-color: #0e131c;
+            }
+        </style>
 </head>
-
 
 
 
 <body>
     <div class="container">
         <br><br>
-        <!--ADD NEW POST-->
-        <label>CATEGORIES</label><button type="button" class="btn pull-right btn-danger">ADD A NEW POST</button>
-        <br>
+                @using (Html.BeginForm("CreateForm", "Home", FormMethod.Post))
+                {
+                   <button type="submit" class="btn pull-left btn-danger">Create POST</button>
+        }
+        @using (Html.BeginForm("Dashboard", "Home"))
+        {
+            <button type="submit" class="btn pull-left btn-danger">Refresh</button>
+        }
+        <br><br /><br />
+    </div>      
 
-        <!--============================================Categories-->
-
-        <div class="row">
-            <hr class="hr-primary" />
-            <ol class="breadcrumb bread-primary ">
-                <button href="#" class="btn btn-primary"><i class="fa fa-newspaper-o"></i> Dog</button>
-                <li><a href="#">LOCATION</a></li>
-                <li><a href="#">PRICE</a></li>
-                <li class="active">CAT</li>
-            </ol>
-        </div>
-
-
-
-
-        <!--============================================-Blog Post-->
-        <hr>
-        <div class="well">
-            <div class="media">
-                <a class="pull-left" href="#">
-                    <img class="media-object" src="http://placehold.it/260x180">
-                </a>
-                <div class="media-body">
-                    <h4 class="media-heading">Title of the post</h4>
-                    <button type="button" class="btn btn-success text-right">APPLY FOR JOB</button>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                        Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                        dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                        Aliquam in felis sit amet augue.
-                    </p>
-                    <ul class="list-inline list-unstyled">
-                        <li><span><i class="glyphicon glyphicon-calendar"></i> May 24th, 2017 </span></li>
-                        <li>|</li>
-                        <li><span><i class="glyphicon glyphicon-price"></i> $200</span></li>
-                        <li>|</li>
-                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Philadelphia</a></span></li>
-                        <li>|</li>
-                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Dog</a></span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-        <div class="well">
-            <div class="media">
-                <a class="pull-left" href="#">
-                    <img class="media-object" src="http://placehold.it/260x180">
-                </a>
-                <div class="media-body">
-                    <h4 class="media-heading">Title of the post</h4>
-                    <button type="button" class="btn btn-success text-right">APPLY FOR JOB</button>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                        Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                        dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                        Aliquam in felis sit amet augue.
-                    </p>
-                    <ul class="list-inline list-unstyled">
-                        <li><span><i class="glyphicon glyphicon-calendar"></i> May 24th, 2017 </span></li>
-                        <li>|</li>
-                        <li><span><i class="glyphicon glyphicon-price"></i> $200</span></li>
-                        <li>|</li>
-                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Philadelphia</a></span></li>
-                        <li>|</li>
-                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Dog</a></span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-
-        <hr>
-        <div class="well">
-            <div class="media">
-                <a class="pull-left" href="#">
-                    <img class="media-object" src="http://placehold.it/260x180">
-                </a>
-                <div class="media-body">
-                    <h4 class="media-heading">Title of the post</h4>
-                    <button type="button" class="btn btn-success text-right">APPLY FOR JOB</button>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                        Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                        dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                        Aliquam in felis sit amet augue.
-                    </p>
-                    <ul class="list-inline list-unstyled">
-                        <li><span><i class="glyphicon glyphicon-calendar"></i> May 24th, 2017 </span></li>
-                        <li>|</li>
-                        <li><span><i class="glyphicon glyphicon-price"></i> $200</span></li>
-                        <li>|</li>
-                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Philadelphia</a></span></li>
-                        <li>|</li>
-                        <li><span><i class="glyphicon glyphicon-price"></i> <a href="">Dog</a></span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <hr>
-
-        <br> <br>
-        <!--============================================-CREATE POST-->
-        <h2>CREATE A NEW POST FORM</h2>
-        <div class="well">
-            <form action="" method="POST">
-
-
-                <h4>CREATE NEW POST:</h4>
-                <div class="form-group">
-                    <label for="title">Title <span class="require">*</span></label>
-                    <input type="text" class="form-control" name="title" />
-                </div>
-
-
-                <div class="form-group">
-                    <label for="title">Price <span class="require">*</span></label>
-                    <input type="text" class="form-control" name="title" />
-                </div>
-
-
-                <div class="form-group">
-                    <label for="title">Location <span class="require">*</span></label>
-                    <input type="text" class="form-control" name="title" />
-                </div>
-
-
-                <div class="form-group">
-                    <label for="title">Category <span class="require">*</span></label>
-                    <input type="text" class="form-control" name="title" />
-                </div>
-
-                <div class="fileinput fileinput-new" data-provides="fileinput">
-                    <span><strong>Upload Image:</strong></span><span class="btn btn-default btn-file"><input type="file" /></span>
-
-                </div>
-
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea rows="5" class="form-control" name="description"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <p><span class="require">*</span> - required fields</p>
-                </div>
-
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">
-                        Create
-                    </button>
-                    <button class="btn btn-default">
-                        Cancel
-                    </button>
-                </div>
-
-            </form>
-        </div>
-    </div>
+<div style="width:90%;">
+    <table id="petTable" class="table table-striped">         
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Location</th>
+                <th>Description</th>
+                <th>Created Date</th>   
+                <th>SubmitRequest</th>             
+            </tr>
+        </thead>
+    </table>
+</div>   
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+ 
+    <script>
+        $(document).ready(function () {
+            var oTable = $('#petTable').DataTable({
+                "ajax": {
+                    "url":'/home/GetData',
+                    "type": "get",
+                    "datatype": "json"
+                },
+                "columns": [                    
+                    { "data": "Title", "autoWidth": true },
+                    { "data": "Category", "autoWidth": true },
+                    { "data": "Price", "autoWidth": true },
+                    { "data": "Location", "autoWidth": true },
+                    { "data": "Description", "autoWidth": true },
+                    { "data": "DateTime", "autoWidth": true },
+                    { "data": "Id","width":"50px","render":function(data)
+                    { return '<a type="submit" class="btn btn-success" onClick="doSubmit()">Request</a>'; }
+                  }
+                ]
+            })
+        })
+    </script>
 </body>
 </html>

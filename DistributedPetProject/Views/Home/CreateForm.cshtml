@@ -1,0 +1,75 @@
+﻿<h2>CREATE A NEW POST FORM</h2>
+<head>
+    <script type="text/javascript">
+        function Validate() {
+            var checkTitle = document.getElementById("test").title.value;
+            var checkPrice = document.getElementById("test").price.value;
+            var checkLocation = document.getElementById("test").location.value;
+            
+            
+            if (checkTitle.length == 0 || checkPrice.length == 0 || checkLocation.length == 0)
+            {
+                alert("Please enter your All the details");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Dashboard", "Home", FormMethod.Post))
+        {
+            <button type="submit" class="btn btn-danger">Dashboard</button>
+        }
+        <br><br>
+    </div>
+    <div class="well" name="reg">
+       @*@using (Html.BeginForm("AddForm", "Home", FormMethod.Post))
+       {*@
+        
+        <form action="@Url.Action("AddForm", "Home")" method="post" id="test">
+            <h4>CREATE NEW POST:</h4>
+            <div class="form-group">
+                <label for="title">Title <span class="require">*</span></label>
+                <input type="text" class="form-control" name="title" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="title">Price <span class="require">*</span></label>
+                <input type="text" class="form-control" name="price" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="title">Location <span class="require">*</span></label>
+                <input type="text" class="form-control" name="location"/>
+            </div>
+
+            <br/><br />
+            <div class="form-group">
+                <label for="title">Category <span class="require">*</span></label>
+                <select name="category">
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                </select>
+            </div><br />
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea rows="5" class="form-control" name="desc"></textarea>
+            </div>
+
+            <div class="form-group">
+                <p><span class="require">*</span> - required fields</p>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" onsubmit="return Validate()">
+                    Create Post 
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
